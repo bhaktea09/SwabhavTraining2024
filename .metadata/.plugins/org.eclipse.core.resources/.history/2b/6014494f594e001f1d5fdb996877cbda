@@ -1,0 +1,9 @@
+package com.techlabs.isp.violation.test;
+
+import com.techlabs.isp.violation.model.Labour;
+import com.techlabs.isp.violation.model.iworker;
+
+public class Workertest {
+	iworker worker = new iworker();
+	
+}

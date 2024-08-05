@@ -1,0 +1,9 @@
+package com.techlabs.structural.Facade.model;
+
+public interface Idvd {
+	boolean start();
+	boolean stop();
+	 boolean on();
+	boolean off();
+
+}

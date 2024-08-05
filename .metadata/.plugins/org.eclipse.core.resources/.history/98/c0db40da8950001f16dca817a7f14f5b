@@ -1,0 +1,23 @@
+package com.techlabs.structural.composite.test;
+
+import com.techlabs.structural.composite.model.ITaskcomponent;
+import com.techlabs.structural.composite.model.Simpletaskleaf;
+import com.techlabs.structural.composite.model.TaskList;
+
+// Client
+
+public class TaskManagementApp {
+	public static void main(String[] args) {
+		// Creating simple tasks
+		Simpletaskleaf simpleTask1 = new Simpletaskleaf();
+		Simpletaskleaf simpleTask2 = new Simpletaskleaf();
+
+		// Creating a task list
+		TaskList projectTasks = new TaskList("Project Tasks");
+		projectTasks.addTask(projectTasks);
+		projectTasks.addTask(projectTasks);
+
+		// Displaying tasks
+		projectTasks.display();
+	}
+}

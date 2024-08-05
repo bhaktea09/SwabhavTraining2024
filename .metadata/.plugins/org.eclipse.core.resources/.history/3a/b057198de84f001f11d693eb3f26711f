@@ -1,0 +1,8 @@
+package com.techlabs.structural.Facade.model;
+
+public class DVD {
+	private boolean start;
+	private boolean stop;
+	private boolean on;
+	private boolean off;
+}

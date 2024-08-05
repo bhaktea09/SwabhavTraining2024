@@ -1,0 +1,82 @@
+package com.techlabs.behavourial.model;
+
+import java.util.List;
+
+import javax.naming.InsufficientResourcesException;
+
+
+
+public class Account {
+	private int accountnumber;
+	private String name;
+	private int balance;
+	private List<INotifier> notifier;
+
+	public Account(int accountnumber, String name, int balance, List<INotifier> notifier) {
+		super();
+		this.accountnumber = accountnumber;
+		this.name = name;
+		this.balance = balance;
+		this.notifier = notifier;
+	}
+
+	public int getAccountnumber() {
+		return accountnumber;
+	}
+
+	public void setAccountnumber(int accountnumber) {
+		this.accountnumber = accountnumber;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	public List<INotifier> getNotifier() {
+		return notifier;
+	}
+
+	public void setNotifier(List<INotifier> notifier) {
+		this.notifier = notifier;
+	}
+
+	public void debit(Account account, int amount)  {
+		for (INotifier notifier : notifier) {
+			notifier.notification(account);
+		if (balance > amount) {
+			throw new InsufficientResourcesException();
+		}else if (amount > 0) {
+			balance -= amount;
+		System.out.println(" amount debited :" + balance);
+		}
+		}
+		
+
+	}
+
+	public void withdraw(Account account, int amount) {
+		balance += amount;
+		for (INotifier notifier : notifier) {
+			notifier.notification(account);
+		}
+		System.out.println("amount credited :" + balance);
+	}
+
+	public void registerNotifier(INotifier notifier) {
+		((List<INotifier>) notifier).add(notifier);
+
+	}
+
+}

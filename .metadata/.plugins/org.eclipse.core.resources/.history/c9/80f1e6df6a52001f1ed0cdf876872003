@@ -1,0 +1,31 @@
+package com.techlabs.test;
+
+import java.util.Scanner;
+
+import com.techlabs.model.Board;
+import com.techlabs.model.Gamefacade;
+import com.techlabs.model.IPlayer;
+import com.techlabs.model.Player;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		IPlayer playerX = new Player('X');
+		IPlayer playerO = new Player('O');
+
+		Gamefacade gameFacade = new Gamefacade(playerX, playerO);
+
+		gameFacade.startGame();
+		gameFacade.makeMove(0, 0); // X
+		gameFacade.makeMove(1, 1); // O
+		// Continue with game moves
+
+		if (gameFacade.checkWinner()) {
+			System.out.println("We have a winner!");
+		}
+
+		System.out.println(gameFacade.getBoard());
+	}
+
+}

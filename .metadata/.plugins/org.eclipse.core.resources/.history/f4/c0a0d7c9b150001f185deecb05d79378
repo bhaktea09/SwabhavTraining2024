@@ -1,0 +1,13 @@
+package com.techlabs.behavourial.test;
+
+import com.techlabs.behavourial.model.INotifier;
+
+public class Accountnotifiertest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Accountnotifiertest an = new Accountnotifiertest();
+		INotifier notifier = new INotifier();
+	}
+
+}

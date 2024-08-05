@@ -1,0 +1,25 @@
+package com.techlabs.creational.factory.model;
+
+public class Savingsaccount implements IAccount{
+	private int accountnumber;
+	private int balance;
+	private int amount;
+
+	@Override
+	public void credit() {
+		// TODO Auto-generated method stub
+		balance += amount;
+		System.out.println("amount is creditted" + balance);
+	}
+
+	@Override
+	public void debit() {
+		// TODO Auto-generated method stub
+		if(amount > balance) {
+			System.out.println("insufficient balance");
+		}else {
+			balance -= amount;
+		}
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.techlabs.creational.decorator.test;
+
+import com.techlabs.creational.decorator.model.Goldenhat;
+import com.techlabs.creational.decorator.model.HatDecorator;
+import com.techlabs.creational.decorator.model.IHat;
+import com.techlabs.creational.decorator.model.Ribonnedhat;
+
+public class Hattest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		IHat hat = new HatDecorator();
+		Goldenhat gh = new Goldenhat(hat);
+		Ribonnedhat rh = new Ribonnedhat(gh);
+		System.out.println(hat.getDescription());
+		System.out.println(gh.getPrice());
+		System.out.println(rh.equals(gh));
+
+	}
+
+}

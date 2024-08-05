@@ -1,0 +1,10 @@
+package com.techlabs.behavourial.model;
+
+public interface INotifier {
+	public void notification(Account account);
+
+	String notification();
+
+	String notification1(Account account);
+	
+}

@@ -1,0 +1,29 @@
+package com.techlabs.test;
+
+import java.util.Scanner;
+
+import com.techlabs.model.Board;
+import com.techlabs.model.ITictactoeGame;
+import com.techlabs.model.Tictactoefacade;
+import com.techlabs.model.Tictactoegame;
+
+public class TictactoeTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ITictactoeGame game = new Tictactoegame();
+		Tictactoefacade facade = new Tictactoefacade();
+		
+		game.startGame();
+		
+		game.makeMove(3, 3);
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.techlabs.creational.decorator.model;
+
+public class HatDecorator implements IHat {
+	private IHat hat;
+	
+	public HatDecorator() {
+		super();
+		this.hat = hat;
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return getName();
+	}
+
+	public String getPrice(IHat hat2) {
+		// TODO Auto-generated method stub
+		return getPrice();
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return getDescription();
+	}
+
+}

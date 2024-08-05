@@ -1,0 +1,14 @@
+package com.techlabs.creational.factory.model;
+
+public class Marutifctory implements ICarfactory {
+
+	
+
+	@Override
+	public Icar makecar() {
+		// TODO Auto-generated method stub
+		return new Maruti();
+	}
+
+	
+}

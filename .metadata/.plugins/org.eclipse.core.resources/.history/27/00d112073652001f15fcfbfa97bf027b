@@ -1,0 +1,77 @@
+package com.techlabs.model;
+
+public class Board {
+	private char board[][];
+	private char currentplayer;
+
+	public Board() {
+		board = new char[3][3];
+		currentplayer = 'X';
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board.length; j++) {
+				board[i][j] = ' ';
+			}
+		}
+
+	}
+
+	public boolean iscellempty(int row, int col) {
+		return board[row][col] == ' ';
+	}
+
+	public void placemark(int row, int col,char mark) {
+		if (iscellempty(row, col)) {
+			board[row][col] = mark;
+		}
+	}
+	public boolean checkwin() {
+		for (int i = 0; i < 3; i++) {
+			//row wise
+			if(board[i][0] == currentplayer &&
+				board[i][1] == currentplayer &&
+				board[i][2] == currentplayer) {
+				return true;
+			}
+			//columns
+			if(board[0][i] == currentplayer &&
+					board[1][i] == currentplayer &&
+					board[2][i] == currentplayer) {
+					return true;
+				}
+			//diagonal
+			if(board[0][0] == currentplayer &&
+					board[1][1] == currentplayer &&
+					board[2][2] == currentplayer) {
+					return true;
+				}
+			//antidiagonally
+			if(board[0][2] == currentplayer &&
+					board[1][1] == currentplayer &&
+					board[2][0] == currentplayer) {
+					return true;
+				}
+		}
+		return false;
+		
+	}
+	public void switchcurrentplayer() {
+		if (currentplayer == 'X') {
+		    currentplayer = 'O';
+		} else {
+		    currentplayer = 'X';
+		}	
+	}
+	public char getCurrentPlayer() {
+        return currentplayer;
+    }
+	 public void printBoard() {
+	        for (int i = 0; i < 3; i++) {
+	            for (int j = 0; j < 3; j++) {
+	                System.out.print(board[i][j]);
+	                if (j < 2) System.out.print("|");
+	            }
+	            System.out.println();
+	            if (i < 2) System.out.println("-----");
+	        }
+	    }
+}

@@ -1,0 +1,7 @@
+package com.techlabs.model;
+
+public class Board {
+	private  char board [][];
+	private char currentplayer;
+
+}

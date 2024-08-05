@@ -1,0 +1,44 @@
+package com.techlabs.model;
+
+public class Board {
+	private char board[][];
+	private char currentplayer;
+
+	public Board() {
+		board = new char[3][3];
+		currentplayer = 'X';
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board.length; j++) {
+				board[i][j] = ' ';
+			}
+		}
+
+	}
+
+	public boolean iscellempty(int row, int col) {
+		return board[row][col] == ' ';
+	}
+
+	public void placemark(int row, int col,char mark) {
+		if (iscellempty(row, col)) {
+			board[row][col] = mark;
+		}
+	}
+	public boolean checkwin() {
+		for (int i = 0; i < 3; i++) {
+			//row wise
+			if(board[i][1] == currentplayer &&
+				board[i][2] == currentplayer &&
+				board[i][3] == currentplayer) {
+				return true;
+			}
+			if(board[1][i] == currentplayer &&
+					board[2][i] == currentplayer &&
+					board[3][i] == currentplayer) {
+					return true;
+				}
+		}
+		return false;
+		
+	}
+}

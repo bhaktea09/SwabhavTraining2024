@@ -1,0 +1,50 @@
+package com.techlabs.model;
+public class Board implements IBoard{
+    private char[][] cells;
+    
+    public Board() {
+        cells = new char[3][3];
+        initialize();
+    }
+    
+    public void initialize() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                cells[i][j] = ' ';
+            }
+        }
+    }
+    
+    public void setCell(int row, int col, char symbol) {
+        cells[row][col] = symbol;
+    }
+    
+    public char getCell(int row, int col) {
+        return cells[row][col];
+    }
+    
+    public boolean isFull() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (cells[i][j] == ' ') {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                sb.append(cells[i][j]);
+                if (j < 2) sb.append('|');
+            }
+            sb.append('\n');
+            if (i < 2) sb.append("-----\n");
+        }
+        return sb.toString();
+    }
+}

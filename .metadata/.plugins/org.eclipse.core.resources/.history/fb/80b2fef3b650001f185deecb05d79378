@@ -1,0 +1,6 @@
+package com.techlabs.behavourial.model;
+
+public interface INotifier {
+	public boolean notification(Account account);
+	
+}

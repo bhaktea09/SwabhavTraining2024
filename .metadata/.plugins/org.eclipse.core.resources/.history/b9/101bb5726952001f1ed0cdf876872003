@@ -1,0 +1,25 @@
+package com.techlabs.model;
+
+public class Gamefacade {
+    private IGame game;
+
+    public Gamefacade(IPlayer player1, IPlayer player2) {
+        this.game = new Game(player1, player2);
+    }
+
+    public void startGame() {
+        game.start();
+    }
+
+    public boolean makeMove(int row, int col) {
+        return game.makeMove(row, col);
+    }
+
+    public boolean checkWinner() {
+        return game.checkWinner();
+    }
+
+    public IBoard getBoard() {
+        return game.getBoard();
+    }
+}

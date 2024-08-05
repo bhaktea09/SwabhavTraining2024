@@ -1,0 +1,26 @@
+package com.techlabs.creational.decorator.test;
+
+import com.techlabs.creational.decorator.model.Goldenhat;
+import com.techlabs.creational.decorator.model.IHat;
+import com.techlabs.creational.decorator.model.Ribonnedhat;
+import com.techlabs.creational.decorator.model.StandardHat;
+
+public class Hattest {
+
+    public static void main(String[] args) {
+        // Create a standard hat
+        IHat hat = new StandardHat("Casual Hat", 500, "A comfortable casual hat");
+
+        // Apply the Goldenhat decorator
+        IHat goldenHat = new Goldenhat(hat);
+
+        // Apply the Ribonnedhat decorator
+        IHat ribonnedHat = new Ribonnedhat(goldenHat);
+
+        // Output details
+        System.out.println("Description: " + ribonnedHat.getDescription());
+        System.out.println("Price: " + ribonnedHat.getPrice());
+        // Check equality if necessary (requires proper equals implementation)
+        System.out.println("Is ribonnedHat equal to goldenHat? " + ribonnedHat.equals(goldenHat));
+    }
+}

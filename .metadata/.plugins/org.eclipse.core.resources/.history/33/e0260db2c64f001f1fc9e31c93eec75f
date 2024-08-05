@@ -1,0 +1,11 @@
+package com.techlabs.creational.builder.model;
+
+public interface IPersonbuilder {
+	 // PersonBuilder Interface
+   
+        String getName();
+        int getAge();
+        String getAddress();
+    }
+
+

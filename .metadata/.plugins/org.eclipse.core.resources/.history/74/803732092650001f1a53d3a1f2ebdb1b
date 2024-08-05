@@ -1,0 +1,13 @@
+package com.techlabs.structural.proxy.test;
+
+import com.techlabs.structural.proxy.model.IImage;
+import com.techlabs.structural.proxy.model.Proxyimage;
+
+public class Proxytest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Image image = new Proxyimage( "example.jpg");
+	}
+
+}

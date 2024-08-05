@@ -1,0 +1,50 @@
+package com.techlabs.model;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class Board {
+	public int size;
+	public Playingpiece[][] board;
+
+	public Board(int size) {
+		super();
+		this.size = size;
+		this.board = new Playingpiece[size][size];
+	}
+
+	public boolean addpiece(int row, int col, Playingpiece playingpiece) {
+		if (board[row][col] != null) {
+			return false;
+		} else {
+			board[row][col] = playingpiece;
+			return true;
+		}
+	}
+
+	public int getfreecells() {
+		int freecellcount = 0;
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				if (board[i][j] == null) {
+					freecellcount++;
+				}
+			}
+		}
+		return freecellcount;
+
+	}
+	public void printboard() {
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				if(board[i][j] != null) {
+					System.out.println(board[i][j].piecetype.name());
+				}else {
+					System.out.println(" ");
+				}
+			}System.out.println("|");
+	}System.out.println();
+	return ;
+}
+}

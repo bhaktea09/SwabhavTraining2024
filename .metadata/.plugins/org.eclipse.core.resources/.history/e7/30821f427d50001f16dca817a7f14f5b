@@ -1,0 +1,14 @@
+package com.techlabs.creational.decorator.test;
+
+import com.techlabs.creational.decorator.model.HatDecorator;
+import com.techlabs.creational.decorator.model.IHat;
+
+public class Hattest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		IHat hat = new HatDecorator();
+
+	}
+
+}

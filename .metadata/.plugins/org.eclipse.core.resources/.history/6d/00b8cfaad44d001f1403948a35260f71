@@ -1,0 +1,19 @@
+package com.techlabs.model;
+
+public class Cicrle implements Shape {
+	private int radius;
+	
+	public Cicrle(int radius) {
+		super();
+		this.raidus=radius;
+	}
+
+	@Override
+	public void area() {
+		// TODO Auto-generated method stub
+		System.out.println(3.14*raidus);
+	}
+
+	
+
+}

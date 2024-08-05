@@ -1,0 +1,6 @@
+package com.techlabs.creational.factory.model;
+
+public class Marutifctory implements ICarfactory , Icar{
+
+	
+}

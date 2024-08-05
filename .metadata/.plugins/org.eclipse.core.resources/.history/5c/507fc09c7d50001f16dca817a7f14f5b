@@ -1,0 +1,16 @@
+package com.techlabs.creational.decorator.model;
+
+public class Goldenhat extends HatDecorator {
+
+	public Goldenhat(IHat hat) {
+		super(hat);
+		// TODO Auto-generated constructor stub
+	}
+
+	public IHat Goldenhat(IHat hat) {
+		
+		// TODO Auto-generated constructor stub
+		return hat;
+	}
+
+}

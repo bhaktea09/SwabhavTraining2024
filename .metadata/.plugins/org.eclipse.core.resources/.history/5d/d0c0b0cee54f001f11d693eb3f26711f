@@ -1,0 +1,9 @@
+package com.techlabs.structural.Facade.model;
+
+public class IndianMenu {
+	public void display() {
+		System.out.println("idli");
+		System.out.println("dosa");
+	}
+	
+}

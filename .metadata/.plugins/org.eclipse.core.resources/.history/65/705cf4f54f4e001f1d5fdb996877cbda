@@ -1,0 +1,10 @@
+package com.techlabs.ocp.solution.model;
+
+public class FixedDeposit {
+	private int accountnumber;
+	private String name;
+	private double principal;
+	private int duration;
+	private Festival Festivaltype;
+	
+}

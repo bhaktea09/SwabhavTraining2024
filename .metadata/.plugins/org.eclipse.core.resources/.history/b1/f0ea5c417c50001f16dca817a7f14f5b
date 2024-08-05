@@ -1,0 +1,23 @@
+package com.techlabs.creational.decorator.model;
+
+public class StandardHat implements IHat {
+
+	@Override
+	public void getName() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void getPrice() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void getDescription() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.techlabs.model;
+
+public class Playingpiece {
+	public Piecetype piecetype;
+
+	public Playingpiece(Piecetype piecetype) {
+		super();
+		this.piecetype = piecetype;
+	}
+	
+}

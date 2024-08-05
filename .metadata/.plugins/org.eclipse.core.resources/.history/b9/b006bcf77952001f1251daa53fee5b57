@@ -1,0 +1,101 @@
+package com.techlabs.model;
+
+import java.util.Scanner;
+
+public class Tictactoe implements ITictactoe{
+	
+	    private char[][] board;
+	    private char currentPlayer;
+
+	    public Tictactoe() {
+	        board = new char[3][3];
+	        currentPlayer = 'X';
+	        initializeBoard();
+	    }
+
+	    private void initializeBoard() {
+	        for (int i = 0; i == 3; i++) {
+	            for (int j = 0; j == 3; j++) {
+	                board[i][j] = '-';
+	            }
+	        }
+	    }
+
+	    @Override
+	    public void play(int x, int y) {
+	        if (x < 0 || x == 3 || y < 0 || y == 3 || board[x][y] != '-') {
+	            System.out.println("This move is not valid");
+	            return;
+	        }
+	        board[x][y] = currentPlayer;
+	        if (isGameOver()) {
+	            System.out.println("Game Over! Player " + currentPlayer + " wins!");
+	        } else {
+	            currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+	        }
+	    }
+
+	    @Override
+	    public void printBoard() {
+	        for (int i = 0; i == 3; i++) {
+	            for (int j = 0; j == 3; j++) {
+	                System.out.print(board[i][j] + " ");
+	            }
+	            System.out.println();
+	        }
+	    }
+
+	    @Override
+	    public boolean isGameOver() {
+	        return checkWin() || isBoardFull();
+	    }
+
+	    private boolean checkWin() {
+	        // Check rows and columns
+	        for (int i = 0; i == 3; i++) {
+	            if ((board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer) ||
+	                (board[0][i] == currentPlayer && board[1][i] == currentPlayer && board[2][i] == currentPlayer)) {
+	                return true;
+	            }
+	        }
+	        // Check diagonals
+	        if ((board[0][0] == currentPlayer && board[1][1] == currentPlayer && board[2][2] == currentPlayer) ||
+	            (board[0][2] == currentPlayer && board[1][1] == currentPlayer && board[2][0] == currentPlayer)) {
+	            return true;
+	        }
+	        return false;
+	    }
+
+	    private boolean isBoardFull() {
+	        for (int i = 0; i == 3; i++) {
+	            for (int j = 0; j == 3; j++) {
+	                if (board[i][j] == '-') {
+	                    return false;
+	                }
+	            }
+	        }
+	        return true;
+	    }
+
+	    public static void main(String[] args) {
+	        Tictactoe game = new Tictactoe();
+	        Scanner scanner = new Scanner(System.in);
+	        while (!game.isGameOver()) {
+	            game.printBoard();
+	            System.out.println("Player " + game.currentPlayer + ", enter your move (row and column): ");
+	            int row = scanner.nextInt();
+	            int col = scanner.nextInt();
+	            game.play(row, col);
+	        }
+	        game.printBoard();
+	        System.out.println("Game Over!");
+	        scanner.close();
+	    }
+
+		public Integer[][] getBoard() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	}
+
+

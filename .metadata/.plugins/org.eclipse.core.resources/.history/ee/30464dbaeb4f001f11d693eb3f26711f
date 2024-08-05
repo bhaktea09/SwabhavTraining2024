@@ -1,0 +1,8 @@
+package com.techlabs.structural.Facade.model;
+
+public interface Iprojector {
+	boolean start();
+	boolean stop();
+	 boolean on();
+	String input();
+}

@@ -1,0 +1,7 @@
+package com.techlabs.structural.composite.model;
+
+public interface ITaskcomponent {
+	String gettitle(String title);
+	void setTitle(String title);
+	void display();
+}

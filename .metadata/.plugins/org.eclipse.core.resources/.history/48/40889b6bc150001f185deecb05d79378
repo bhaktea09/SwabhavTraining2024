@@ -1,0 +1,10 @@
+package com.techlabs.strategy.test;
+
+public class Operationtest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

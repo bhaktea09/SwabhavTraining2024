@@ -1,0 +1,8 @@
+package com.techlabs.structural.Facade.model;
+
+public interface Isoundsystem {
+	boolean start();
+	boolean stop();
+	 boolean on();
+	int volume();
+}

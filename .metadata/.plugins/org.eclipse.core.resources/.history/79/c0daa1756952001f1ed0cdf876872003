@@ -1,0 +1,8 @@
+package com.techlabs.model;
+
+public interface IBoard {
+	void initialize();
+    void setCell(int row, int col, char symbol);
+    char getCell(int row, int col);
+    boolean isFull();
+}

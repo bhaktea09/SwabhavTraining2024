@@ -1,0 +1,25 @@
+package com.techlabs.strategy.model;
+
+public class Operationstrategy  {
+	IOperation operation;
+
+	public Operationstrategy(IOperation operation) {
+		super();
+		this.operation = operation;
+	}
+
+	public IOperation getOperation() {
+		return operation;
+	}
+
+	public int setOperation(IOperation operation) {
+		this.operation = operation;
+		return 0;
+	}
+	public int dooperation(int a , int b) {
+		return operation.dooperation(a, b);
+	}
+
+	
+	
+}

@@ -1,0 +1,16 @@
+package com.techlabs.behavourial.model;
+
+public class Whatsappnotifier implements INotifier{
+	Account account;
+	@Override
+	public String notification() {
+		// TODO Auto-generated method stub
+		return "whatsapp notification";
+	}
+	public void notification(Account account) {
+		// TODO Auto-generated method stub
+		System.out.println(account.getBalance());
+	}
+	
+
+}

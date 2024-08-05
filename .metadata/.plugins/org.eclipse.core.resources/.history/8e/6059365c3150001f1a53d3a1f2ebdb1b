@@ -1,0 +1,48 @@
+package com.techlabs.structural.composite.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.techlabs.structural.composite.model.ITaskcomponent;
+
+public class Tasklistcomposite implements ITaskcomponent {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		List<Task> tasks = new ArrayList<>();
+	}
+
+	private String title;
+
+	public void addtask(Task task) {
+		task.add(task);
+	}
+	
+
+	public void removetask(Task task) {
+		task.remove(task);
+	}
+	@Override
+	public String gettitle() {
+		// TODO Auto-generated method stub
+		return title;
+	}
+
+	@Override
+	public void setTitle(String title) {
+		// TODO Auto-generated method stub
+		this.title=title;
+	}
+
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		System.out.println("display task list"+ title);
+		for(Task task :task) {
+			
+		}
+	}
+
+}
+

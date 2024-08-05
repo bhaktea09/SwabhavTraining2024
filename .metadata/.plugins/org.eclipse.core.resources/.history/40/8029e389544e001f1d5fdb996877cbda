@@ -1,0 +1,8 @@
+package com.techlabs.ocp.solution.model;
+
+public class Diwaliinterest implements ifestivalinterest{
+
+	public int getinterest() {
+		return 8.5;
+	}
+}

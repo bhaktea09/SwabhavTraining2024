@@ -1,0 +1,14 @@
+package com.techlabs.creational.decorator.model;
+
+public class Ribonnedhat extends HatDecorator {
+	private IHat hatobj;
+	public Ribonnedhat(IHat hat) {
+		super();
+		this.hatobj=hatobj;
+	}
+
+	public String Ribonnedhat(IHat hat) {
+		return hatobj.getPrice();
+		}
+
+}

@@ -1,0 +1,7 @@
+package com.techlabs.model;
+
+public class Playingpiece {
+	public Piecetype piecetype; 
+		
+	
+}

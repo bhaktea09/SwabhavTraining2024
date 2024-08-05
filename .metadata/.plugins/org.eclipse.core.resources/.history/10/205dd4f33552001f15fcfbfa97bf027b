@@ -1,0 +1,37 @@
+package com.techlabs.model;
+
+public class Tictactoegame implements ITictactoeGame{
+	private Board board;
+	
+	public Tictactoegame() {
+		Board baard = new Board();
+	}
+	@Override
+	public void startGame() {
+		// TODO Auto-generated method stub
+		Board board = new Board();
+		System.out.println("start the game :");
+	}
+
+	@Override
+	public void makeMove() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public char checkWinner() {
+		// TODO Auto-generated method stub
+		if(board.checkwin()) {
+		return board.getCurrentPlayer();
+	}
+		return ' ';
+	}
+
+	@Override
+	public void printBoard() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

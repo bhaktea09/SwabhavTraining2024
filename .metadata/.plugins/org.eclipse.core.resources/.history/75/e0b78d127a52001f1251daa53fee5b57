@@ -1,0 +1,41 @@
+package com.techlabs.model;
+
+import com.techlabs.model.Tictactoe;
+import com.techlabs.model.ITictactoe;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class TictactoeTest {
+    private ITictactoe game;
+
+    @BeforeEach
+    public void init() {
+        game = new Tictactoe();
+    }
+
+    @Test
+    public void testInitialization() {
+        game.printBoard();
+        assertFalse(game.isGameOver(), "Game should not be over at the start");
+    }
+
+    @Test
+    public void testValidMoves() {
+        game.printBoard();
+        assertEquals('X', ((Tictactoe) game).getBoard()[0][0], "First move should be X");
+        assertEquals('O', ((Tictactoe) game).getBoard()[1][1], "Second move should be O");
+    }
+
+    @Test
+    public void testWinningCondition() {
+       // Assuming this move wins the game
+        assertTrue(game.isGameOver(), "Game should be over after a win");
+    }
+
+    @Test
+    public void testDrawCondition() {
+    
+        assertTrue(game.isGameOver(), "Game should be over after a draw");
+    }
+}

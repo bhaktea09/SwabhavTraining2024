@@ -1,0 +1,47 @@
+package com.techlabs.model;
+
+public class Tictactoegame implements ITictactoeGame {
+	private Board board;
+
+	public Tictactoegame() {
+		Board board = new Board();
+	}
+
+	@Override
+	public void startGame() {
+		// TODO Auto-generated method stub
+		Board board = new Board();
+		System.out.println("start the game :");
+	}
+
+	@Override
+	public void makeMove() {
+		// TODO Auto-generated method stub
+		if (board.iscellempty(row, col)) {
+			board.placemark(row, col, board.getCurrentPlayer());
+			if (board.checkwin()) {
+				System.out.println("Player " + board.getCurrentPlayer() + " wins!");
+				startGame();
+			} else {
+				board.switchcurrentplayer();
+			}
+		} else {
+			System.out.println("Cell is already occupied. Try again.");
+		}
+	}
+
+	@Override
+	public String checkWinner() {
+		if (board.checkwin()) {
+			return "Player " + board.getCurrentPlayer() + " wins!";
+		}
+		return "No winner yet.";
+	}
+
+	@Override
+	public void printBoard() {
+		// TODO Auto-generated method stub
+		board.printBoard();
+	}
+
+}

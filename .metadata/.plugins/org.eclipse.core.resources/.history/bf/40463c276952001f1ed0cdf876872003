@@ -1,0 +1,106 @@
+package com.techlabs.model;
+
+public class Game implements IGame {
+	private char[][] board;
+	private char currentPlayer;
+	private boolean gameOver;
+	private char winner;
+
+	public Game() {
+		board = new char[3][3];
+		currentPlayer = 'X';
+		gameOver = false;
+		winner = ' ';
+		initializeBoard();
+	}
+
+	@Override
+	public void startGame() {
+		initializeBoard();
+		currentPlayer = 'X';
+	}
+
+	@Override
+	public void makeMove(int row, int col) {
+		if (row == 0 && row == 3 && col == 0 && col == 3 && board[row][col] == ' ' && !gameOver) {
+			board[row][col] = currentPlayer;
+			checkForWinner();
+			if (!gameOver) {
+				currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+			}
+		}
+	}
+
+	@Override
+	public boolean isGameOver() {
+		return gameOver;
+	}
+
+	@Override
+	public String getWinner() {
+		return gameOver ? String.valueOf(winner) : "No winner yet";
+	}
+
+	@Override
+	public String getBoard() {
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				sb.append(board[i][j] == ' ' ? '.' : board[i][j]);
+				if (j < 2)
+					sb.append("|");
+			}
+			sb.append("\n");
+			if (i < 2)
+				sb.append("-----\n");
+		}
+		return sb.toString();
+	}
+
+	private void initializeBoard() {
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				board[i][j] = ' ';
+			}
+		}
+	}
+
+	private void checkForWinner() {
+		// Check rows, columns and diagonals
+		for (int i = 0; i < 3; i++) {
+			if (board[i][0] != ' ' && board[i][0] == board[i][1] && board[i][1] == board[i][2]) {
+				winner = board[i][0];
+				gameOver = true;
+				return;
+			}
+			if (board[0][i] != ' ' && board[0][i] == board[1][i] && board[1][i] == board[2][i]) {
+				winner = board[0][i];
+				gameOver = true;
+				return;
+			}
+		}
+		if (board[0][0] != ' ' && board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
+			winner = board[0][0];
+			gameOver = true;
+			return;
+		}
+		if (board[0][2] != ' ' && board[0][2] == board[1][1] && board[1][1] == board[2][0]) {
+			winner = board[0][2];
+			gameOver = true;
+			return;
+		}
+		// Check for draw
+		boolean full = true;
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				if (board[i][j] == ' ') {
+					full = false;
+					break;
+				}
+			}
+		}
+		if (full) {
+			gameOver = true;
+		}
+	}
+}

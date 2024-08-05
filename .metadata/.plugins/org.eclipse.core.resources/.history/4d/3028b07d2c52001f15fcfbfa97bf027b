@@ -1,0 +1,14 @@
+package com.techlabs.structural.Facade.model;
+
+public class Hotelreception {
+	public IMenu getIndianmenu() {
+		Hotelreception waiter = new Hotelreception();
+		waiter.getIndianmenu();
+		waiter.getIndianmenu();
+	}
+	public IMenu getItalianMenu() {
+		Hotelreception waiter1 = new Hotelreception();
+		waiter1.getItalianMenu();
+
+	}
+}

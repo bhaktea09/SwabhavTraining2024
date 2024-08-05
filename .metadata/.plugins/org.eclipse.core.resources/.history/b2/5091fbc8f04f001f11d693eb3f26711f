@@ -1,0 +1,24 @@
+package com.techlabs.structural.adapter.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Shoppingcart {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Iitems> cartitems = new ArrayList<>();
+	}
+		
+	public void additemstocart(Iitems item) {
+			cartitems.add(item);
+		}
+	
+	public List<Iitems> getcartitems(){
+			return getcartitems();
+		}
+	public double getcartprice() {
+		return getcartprice();
+	}
+	}
+

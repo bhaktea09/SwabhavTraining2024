@@ -1,0 +1,14 @@
+package com.techlabs.creational.decorator.model;
+
+public class Ribonnedhat extends HatDecorator {
+
+	public Ribonnedhat(IHat hat) {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public IHat Ribonnedhat(IHat hat) {
+		return hat;
+		}
+
+}

@@ -1,0 +1,56 @@
+package com.techlabs.creational.builder.model;
+
+public class Car {
+    private String wheels;
+    private String body;
+    private String engine;
+
+    private Car(CarBuilder builder) {
+        this.wheels = builder.wheels;
+        this.body = builder.body;
+        this.engine = builder.engine;
+    }
+
+    @Override
+    public String toString() {
+        return "Car [Wheels=" + wheels + ", Body=" + body + ", Engine=" + engine + "]";
+    }
+
+    // ICarBuilder Interface
+    public interface ICarBuilder {
+        ICarBuilder addWheels(String wheels);
+        ICarBuilder addBody(String body);
+        ICarBuilder addEngine(String engine);
+        Car build();
+    }
+
+    // Concrete Builder Implementation
+    public static class CarBuilder implements ICarBuilder {
+        private String wheels;
+        private String body;
+        private String engine;
+
+        @Override
+        public ICarBuilder addWheels(String wheels) {
+            this.wheels = wheels;
+            return this;
+        }
+
+        @Override
+        public ICarBuilder addBody(String body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ICarBuilder addEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+
+        @Override
+        public Car build() {
+            return new Car(this);
+        }
+    }
+}

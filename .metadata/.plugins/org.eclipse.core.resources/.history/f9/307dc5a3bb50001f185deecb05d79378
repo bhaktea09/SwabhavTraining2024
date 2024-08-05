@@ -1,0 +1,8 @@
+package com.techlabs.behavourial.state.model;
+
+public interface IPacket {
+	public void previous(Packet packet);
+	public void current(Pakcet packet);
+	public void next(Packet packet);
+	
+}

@@ -1,0 +1,17 @@
+package com.techlabs.model;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class AreacalculatorTest {
+	Areacalculator areacalculator;
+	public void init() {
+		areacalculator = new Areacalculator();
+	}
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

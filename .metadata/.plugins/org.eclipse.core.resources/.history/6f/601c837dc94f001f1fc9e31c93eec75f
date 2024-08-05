@@ -1,0 +1,19 @@
+package com.techlabs.creational.builder.model;
+
+public class Engine {
+	private String horsepower;
+
+	public Engine(String horsepower) {
+		super();
+		this.horsepower = horsepower;
+	}
+
+	public String getHorsepower() {
+		return horsepower;
+	}
+
+	public void setHorsepower(String horsepower) {
+		this.horsepower = horsepower;
+	}
+	
+}

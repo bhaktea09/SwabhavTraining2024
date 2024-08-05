@@ -1,0 +1,7 @@
+package com.techlabs.structural.Facade.model;
+
+public class Hotelreception {
+    public static void main(String[] args) {
+        Hotelreception reception = new Hotelreception();
+    }
+}

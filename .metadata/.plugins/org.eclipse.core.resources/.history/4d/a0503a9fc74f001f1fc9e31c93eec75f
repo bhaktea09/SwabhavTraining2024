@@ -1,0 +1,19 @@
+package com.techlabs.creational.builder.model;
+
+public class Wheels {
+	private String size;
+
+	public Wheels(String size) {
+		super();
+		this.size = size;
+	}
+
+	public String getSize() {
+		return size;
+	}
+
+	public void setSize(String size) {
+		this.size = size;
+	}
+	
+}

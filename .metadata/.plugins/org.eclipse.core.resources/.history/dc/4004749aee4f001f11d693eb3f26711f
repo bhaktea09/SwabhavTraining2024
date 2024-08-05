@@ -1,0 +1,9 @@
+package com.techlabs.structural.adapter.model;
+
+public class Hat implements Iitems {
+	private String shortname;
+	private String longname;
+	
+	
+	
+}

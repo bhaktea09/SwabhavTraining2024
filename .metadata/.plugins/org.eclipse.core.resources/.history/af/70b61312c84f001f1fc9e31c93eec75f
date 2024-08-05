@@ -1,0 +1,7 @@
+package com.techlabs.creational.builder.model;
+
+public interface ICarbuilder {
+	public ICarbuilder addwheels();
+	public ICarbuilder addbody();
+	public ICarbuilder addengine();
+}

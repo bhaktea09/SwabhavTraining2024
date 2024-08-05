@@ -1,0 +1,21 @@
+package com.techlabs.structural.Facade.model;
+
+public class Hotelreception {
+    public static void main(String[] args) {
+        Hotelreception reception = new Hotelreception();
+    }
+    
+        @SuppressWarnings("unused")
+		private IMenu getIndianMenu(Hotelreception reception) {
+        IMenu indianMenu = reception.getIndianMenu(reception);
+        return indianMenu.displaymenu();
+        }
+       
+        @SuppressWarnings("unused")
+		private IMenu getItalianMenu(Hotelreception reception) {
+		// TODO Auto-generated method stub
+		  IMenu italianMenu = reception.getItalianMenu(reception);
+	        return italianMenu.displaymenu();
+		
+	}
+}

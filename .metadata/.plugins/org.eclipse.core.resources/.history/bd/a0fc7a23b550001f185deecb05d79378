@@ -1,0 +1,20 @@
+package com.techlabs.behavourial.model;
+
+public class SMSnotifier implements INotifier{
+	
+	@Override
+	public String notification() {
+		// TODO Auto-generated method stub
+		return "sms notification";
+	}
+
+	public String notification(Account account) {
+		// TODO Auto-generated method stub
+		
+		System.out.println(account.getBalance());
+	}
+
+	
+	
+
+}

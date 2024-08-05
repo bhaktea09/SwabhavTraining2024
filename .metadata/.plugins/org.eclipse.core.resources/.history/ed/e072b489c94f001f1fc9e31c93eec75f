@@ -1,0 +1,17 @@
+package com.techlabs.creational.builder.test;
+
+import com.techlabs.creational.builder.model.Urusbuilder;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Urusbuilder urus = new Urusbuilder();
+		urus.addbody();
+		urus.addengine();
+		urus.addwheels();
+	
+		
+	}
+
+}

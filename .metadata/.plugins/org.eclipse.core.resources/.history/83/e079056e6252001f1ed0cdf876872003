@@ -1,0 +1,35 @@
+package com.techlabs.test;
+
+import java.util.Scanner;
+
+import com.techlabs.model.Tictactoefacade;
+
+public class TictactoeTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		        Tictactoefacade facade = new Tictactoefacade();
+		        Scanner scanner = new Scanner(System.in);
+
+		        facade.startGame();
+
+		        while (true) {
+		            facade.printBoard();
+		            System.out.println("Player " + facade.checkWinner() + ", make your move (row and column): ");
+		            int row = scanner.nextInt();
+		            int col = scanner.nextInt();
+		            facade.makeMove(row, col);
+
+		            String winner = facade.checkWinner();
+		            if (!winner.equals("No winner yet.")) {
+		                System.out.println(winner);
+		                break;
+		            }
+		        }
+
+		}
+
+}
+
+

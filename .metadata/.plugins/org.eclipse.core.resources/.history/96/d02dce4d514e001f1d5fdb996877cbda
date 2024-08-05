@@ -1,0 +1,56 @@
+package com.techlabs.ocp.solution.model;
+
+public class FixedDeposit {
+	private int accountnumber;
+	private String name;
+	private double principal;
+	private int duration;
+	private Festival Festivaltype;
+	public FixedDeposit(int accountnumber, String name, double principal, int duration, Festival festivaltype) {
+		super();
+		this.accountnumber = accountnumber;
+		this.name = name;
+		this.principal = principal;
+		this.duration = duration;
+		Festivaltype = festivaltype;
+	}
+	public int getAccountnumber() {
+		return accountnumber;
+	}
+	public void setAccountnumber(int accountnumber) {
+		this.accountnumber = accountnumber;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getPrincipal() {
+		return principal;
+	}
+	public void setPrincipal(double principal) {
+		this.principal = principal;
+	}
+	public int getDuration() {
+		return duration;
+	}
+	public void setDuration(int duration) {
+		this.duration = duration;
+	}
+	public Festival getFestivaltype() {
+		return Festivaltype;
+	}
+	public void setFestivaltype(Festival festivaltype) {
+		Festivaltype = festivaltype;
+	}
+	@Override
+	public String toString() {
+		return "FixedDeposit [accountnumber=" + accountnumber + ", name=" + name + ", principal=" + principal
+				+ ", duration=" + duration + ", Festivaltype=" + Festivaltype + ", getAccountnumber()="
+				+ getAccountnumber() + ", getName()=" + getName() + ", getPrincipal()=" + getPrincipal()
+				+ ", getDuration()=" + getDuration() + ", getFestivaltype()=" + getFestivaltype() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
+	
+}

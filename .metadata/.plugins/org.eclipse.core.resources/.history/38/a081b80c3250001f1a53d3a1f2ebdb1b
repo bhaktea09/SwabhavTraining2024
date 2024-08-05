@@ -1,0 +1,61 @@
+package com.techlabs.structural.composite.test;
+
+import java.util.ArrayList;
+import java.util.List;
+import com.techlabs.structural.composite.model.ITaskcomponent;
+public class TaskListComposite implements ITaskcomponent {
+
+    private String title;
+    private List<ITaskcomponent> tasks; 
+
+    public TaskListComposite() {
+        tasks = new ArrayList<>();
+    }
+
+    public void addTask(ITaskcomponent task) {
+        tasks.add(task);
+    }
+
+    public void removeTask(ITaskcomponent task) {
+        tasks.remove(task);
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public void display() {
+        System.out.println("Display task list: " + title);
+        for (ITaskcomponent task : tasks) {
+            task.display(); // Call display on each task
+        }
+    }
+
+    public static void main(String[] args) {
+        TaskListComposite taskList = new TaskListComposite();
+        taskList.setTitle("My Task List");
+
+        Task task1 = new Task(); // Assuming Task has a default constructor
+        task1.setTitle("Task 1");
+        
+        Task task2 = new Task();
+        task2.setTitle("Task 2");
+
+        taskList.addTask(task1);
+        taskList.addTask(task2);
+
+        taskList.display(); // Display all tasks in the list
+    }
+
+	@Override
+	public String gettitle() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

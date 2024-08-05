@@ -1,0 +1,9 @@
+package com.techlabs.model;
+
+public interface ITictactoeGame {
+	public void startGame();
+	public void  makeMove();
+	public String checkWinner();
+	public void printBoard();
+	void makeMove(int row, int col); 
+}

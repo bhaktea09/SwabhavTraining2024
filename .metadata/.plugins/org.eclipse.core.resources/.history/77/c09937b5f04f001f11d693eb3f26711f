@@ -1,0 +1,17 @@
+package com.techlabs.structural.adapter.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.techlabs.structural.adapter.model.Iitems;
+
+public class Shoppingcart {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Iitems> cartitems = new ArrayList<>();
+		
+		
+	}
+
+}

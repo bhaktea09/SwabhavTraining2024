@@ -1,0 +1,25 @@
+package com.techlabs.creational.factory.test;
+
+import com.techlabs.creational.factory.model.Mahindra;
+import com.techlabs.creational.factory.model.Maruti;
+import com.techlabs.creational.factory.model.Tata;
+
+public class Cartest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Maruti maruti = new Maruti();
+		Tata tata = new Tata();
+		Mahindra mahindra = new Mahindra();
+		
+		maruti.start();
+		maruti.stop();
+		
+		tata.start();
+		tata.stop();
+		
+		mahindra.start();
+		mahindra.stop();
+	}
+
+}

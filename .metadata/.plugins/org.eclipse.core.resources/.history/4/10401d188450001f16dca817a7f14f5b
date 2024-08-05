@@ -1,0 +1,36 @@
+package com.techlabs.creational.decorator.model;
+
+public class StandardHat implements IHat {
+
+	 private String name;
+	    private int price;
+	    private String description;
+
+	    public StandardHat(String name, int price, String description) {
+	        this.name = name;
+	        this.price = price;
+	        this.description = description;
+	    }
+
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return "bhakti";
+	}
+
+	@Override
+	public int getPrice() {
+		// TODO Auto-generated method stub
+		return 1000;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "hello";
+	}
+
+	
+
+}

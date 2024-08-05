@@ -1,0 +1,29 @@
+package com.techlabs.model;
+
+
+public class Tictactoefacade {
+    private Tictactoegame game;
+
+    public Tictactoefacade() {
+        game = new Tictactoegame();
+    }
+
+    public void startGame() {
+        game.startGame();
+    }
+
+    public void makeMove(int row, int col) {
+        game.makeMove(row, col);
+    }
+
+    public String checkWinner() {
+        return game.checkWinner();
+    }
+
+    public void printBoard() {
+        game.printBoard();
+    }
+    public char getCurrentPlayer() {
+        return getCurrentPlayer();
+    }
+}

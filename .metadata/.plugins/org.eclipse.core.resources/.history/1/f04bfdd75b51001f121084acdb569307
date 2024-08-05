@@ -1,0 +1,26 @@
+package com.techlabs.model;
+
+public class Board {
+	public int size;
+	public Playingpiece[][] board;
+	
+	public Board(int size) {
+		super();
+		this.size = size;
+		this.board = new Playingpiece[size][size] ;
+	}
+
+
+	public boolean addpiece(int row, int col, Playingpiece playingpiece) {
+		if(board[row][col] != null) {
+		return false;}
+		else {
+			board[row][col] = playingpiece;
+					return true;
+		}
+		
+		
+	}
+	
+}	
+

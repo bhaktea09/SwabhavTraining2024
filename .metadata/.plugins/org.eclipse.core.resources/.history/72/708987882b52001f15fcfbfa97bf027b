@@ -1,0 +1,16 @@
+package com.techlabs.structural.Facade.model;
+
+public class Italianhotel implements IMenu{
+
+	public IMenu getmenu() {
+		// TODO Auto-generated method stub
+		return new ItalianMenu();
+	}
+
+	@Override
+	public void displaymenu() {
+		// TODO Auto-generated method stub
+		return;
+	}
+
+}

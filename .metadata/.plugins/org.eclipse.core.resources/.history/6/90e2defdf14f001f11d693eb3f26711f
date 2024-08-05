@@ -1,0 +1,28 @@
+package com.techlabs.structural.adapter.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Shoppingcart {
+
+	public static void main(String[] args) {
+		private List<Iitems> cartitems;
+
+	    // Constructor
+	    public Shoppingcart() {
+	        this.cartitems = new ArrayList<>();
+	    }
+
+	    // Add an item to the cart
+	    public void additemstocart(Iitems item) {
+	        cartitems.add(item);
+	    }
+
+	    // Get the list of cart items
+	    public List<Iitems> getcartitems() {
+	        return cartitems;
+	    }
+	    public double getprice() {
+	    	return getprice();
+	    }
+}

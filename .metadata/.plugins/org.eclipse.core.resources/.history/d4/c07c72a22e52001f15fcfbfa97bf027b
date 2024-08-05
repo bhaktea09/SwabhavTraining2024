@@ -1,0 +1,16 @@
+package com.techlabs.structural.Facade.test;
+
+package com.techlabs.structural.Facade.test;
+
+public class Main {
+    public static void main(String[] args) {
+        HotelReception reception = new HotelReception();
+
+        IMenu indianMenu = reception.getIndianMenu();
+        indianMenu.displayMenu();  // Should print Indian menu items
+
+        IMenu italianMenu = reception.getItalianMenu();
+        italianMenu.displayMenu();  // Should print Italian menu items
+    }
+}
+

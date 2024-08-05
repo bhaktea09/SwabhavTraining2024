@@ -1,0 +1,75 @@
+package com.techlabs.ocp.solution.model;
+
+public class FixedDeposit {
+	private int accountnumber;
+	private String name;
+	private double principal;
+	private int duration;
+	private Festival Festivaltype;
+	public FixedDeposit(int accountnumber, String name, double principal, int duration, Festival festivaltype) {
+		super();
+		this.accountnumber = accountnumber;
+		this.name = name;
+		this.principal = principal;
+		this.duration = duration;
+		Festivaltype = festivaltype;
+		
+	}
+	public int getAccountnumber() {
+		return accountnumber;
+	}
+	public void setAccountnumber(int accountnumber) {
+		this.accountnumber = accountnumber;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getPrincipal() {
+		return principal;
+	}
+	public void setPrincipal(double principal) {
+		this.principal = principal;
+	}
+	public int getDuration() {
+		return duration;
+	}
+	public void setDuration(int duration) {
+		this.duration = duration;
+	}
+	public Festival getFestivaltype() {
+		return Festivaltype;
+	}
+	public void setFestivaltype(Festival festivaltype) {
+		Festivaltype = festivaltype;
+	}
+	
+	private double getInterestrates() {
+		if(Festivaltype == Festivaltype.NEWYEAR )
+		{
+			return 8/100;
+		}
+		if(Festivaltype == Festivaltype.DIWALI)
+		{
+			return 8.5/100;
+		}
+		if(Festivaltype == Festivaltype.HOLI)
+		{
+			return 7.5/100;
+		}
+		if(Festivaltype == Festivaltype.OTHERS)
+		{
+			return 6.5/100;
+		}
+		return (Double) null;
+		
+		
+	}
+	public double calculatesimpleinterest() {
+		return principal*duration*getInterestrates()/100;
+		
+	}
+	
+}

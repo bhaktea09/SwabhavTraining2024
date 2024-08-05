@@ -1,0 +1,10 @@
+package com.techlabs.model;
+
+public interface IGame {
+    void startGame();
+    void makeMove(int row, int col);
+    boolean isGameOver();
+    String getWinner();
+    String getBoard();
+}
+

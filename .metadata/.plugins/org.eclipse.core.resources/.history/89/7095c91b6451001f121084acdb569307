@@ -1,0 +1,10 @@
+package com.techlabs.model;
+
+public class PlayinPieceO extends Playingpiece{
+
+	public PlayinPieceO(Piecetype piecetype) {
+		super(piecetype.O);
+		// TODO Auto-generated constructor stub
+	}
+
+}

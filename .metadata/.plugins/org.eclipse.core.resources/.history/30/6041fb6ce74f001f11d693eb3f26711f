@@ -1,0 +1,12 @@
+package com.techlabs.structural.Facade.model;
+
+public class Indianhotel implements IHotel{
+
+	@Override
+	public void displaymenu() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

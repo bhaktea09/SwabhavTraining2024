@@ -1,0 +1,49 @@
+package com.techlabs.behavourial.model;
+
+import java.util.List;
+
+public class Account {
+	private int accountnumber;
+	private String name;
+	private int balance;
+	private List<INotifier> notifier;
+	public Account(int accountnumber, String name, int balance, List<INotifier> notifier) {
+		super();
+		this.accountnumber = accountnumber;
+		this.name = name;
+		this.balance = balance;
+		this.notifier = notifier;
+	}
+	public int getAccountnumber() {
+		return accountnumber;
+	}
+	public void setAccountnumber(int accountnumber) {
+		this.accountnumber = accountnumber;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getBalance() {
+		return balance;
+	}
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+	public List<INotifier> getNotifier() {
+		return notifier;
+	}
+	public void setNotifier(List<INotifier> notifier) {
+		this.notifier = notifier;
+	}
+	public int debit() {
+		int amount = 0;
+		if(amount > balance) {
+			System.out.println(" insufficient balance :");
+		}
+		return balance -+ amount;
+	}
+	
+}

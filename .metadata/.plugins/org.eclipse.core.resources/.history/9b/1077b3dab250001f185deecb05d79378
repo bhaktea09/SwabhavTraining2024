@@ -1,0 +1,23 @@
+package com.techlabs.behavourial.test;
+
+import com.techlabs.behavourial.model.Account;
+import com.techlabs.behavourial.model.Emailnotifier;
+import com.techlabs.behavourial.model.INotifier;
+import com.techlabs.behavourial.model.SMSnotifier;
+import com.techlabs.behavourial.model.Whatsappnotifier;
+
+public class Accountnotifiertest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Account an = new Account(123, "bhakti", 4000, );
+		INotifier notifier = new SMSnotifier(); 
+		INotifier notifier1 = new Emailnotifier();
+		INotifier notifier2 = new Whatsappnotifier();
+		
+		
+		
+	}
+
+}

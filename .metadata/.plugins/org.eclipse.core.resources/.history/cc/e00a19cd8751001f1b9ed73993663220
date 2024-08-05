@@ -1,0 +1,6 @@
+package com.techlabs.model;
+public class Areacalcalculator{
+public double Areacalculatortest (double radius){
+	return 3.14*radius*radius;
+}
+}

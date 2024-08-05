@@ -1,0 +1,21 @@
+package com.techlabs.creational.decorator.test;
+
+import com.techlabs.creational.decorator.model.Goldenhat;
+import com.techlabs.creational.decorator.model.IHat;
+import com.techlabs.creational.decorator.model.Ribonnedhat;
+import com.techlabs.creational.decorator.model.StandardHat;
+
+public class Hattest {
+
+	public static void main(String[] args) {
+
+		IHat hat = new StandardHat("Casual Hat", 500, "A comfortable casual hat");
+
+		IHat goldenHat = new Goldenhat(hat);
+
+		IHat ribonnedHat = new Ribonnedhat(goldenHat);
+
+		System.out.println("Description: " + ribonnedHat.getDescription());
+		System.out.println("Price: " + ribonnedHat.getPrice());
+	}
+}

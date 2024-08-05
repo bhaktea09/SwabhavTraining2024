@@ -1,0 +1,15 @@
+package com.techlabs.model;
+
+public class Board {
+	public int size;
+	public Playingpiece[][] board;
+	
+	public Board(int size) {
+		super();
+		this.size = size;
+		this.board = new Playingpiece[size][size] ;
+	} 
+	
+	
+	
+}

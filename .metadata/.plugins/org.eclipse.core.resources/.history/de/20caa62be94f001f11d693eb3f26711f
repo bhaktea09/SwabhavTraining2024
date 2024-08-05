@@ -1,0 +1,7 @@
+package com.techlabs.structural.Facade.model;
+
+public class Projector {
+	private boolean on;
+	private boolean off;
+	private String input;
+}

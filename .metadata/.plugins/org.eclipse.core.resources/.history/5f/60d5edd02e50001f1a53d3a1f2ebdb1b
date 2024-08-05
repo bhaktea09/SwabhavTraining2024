@@ -1,0 +1,6 @@
+package com.techlabs.structural.composite.model;
+
+public interface ITaskcomponent {
+	private String title;
+	
+}

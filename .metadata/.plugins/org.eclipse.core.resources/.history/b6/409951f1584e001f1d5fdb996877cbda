@@ -1,0 +1,9 @@
+package com.techlabs.isp.violation.model;
+
+public interface iworker {
+	public void startwork();
+	public void stopwork();
+	public void eat();
+	public void drink();
+	
+}

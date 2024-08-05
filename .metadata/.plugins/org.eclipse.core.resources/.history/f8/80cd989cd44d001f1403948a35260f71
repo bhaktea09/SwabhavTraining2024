@@ -1,0 +1,13 @@
+package com.techlabs.model;
+
+public class Cicrle implements Shape {
+	private int raidus;
+	
+	public Cicrle(int radius) {
+		super();
+		this.raidus=radius;
+	}
+
+	
+
+}

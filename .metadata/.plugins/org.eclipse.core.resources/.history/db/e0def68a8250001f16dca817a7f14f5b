@@ -1,0 +1,34 @@
+package com.techlabs.creational.decorator.model;
+
+public class HatDecorator implements IHat {
+    private IHat hatobj;
+
+    // Constructor that initializes the hatobj
+    public HatDecorator(IHat hat) {
+        this.hatobj = hatobj;
+    }
+
+    @Override
+    public String getName() {
+    	if(hatobj !=null) {
+        return hatobj.getName();
+    	}
+		return "unknown";
+    }
+
+    @Override
+    public String getDescription() {
+    	if(hatobj != null) {
+    		return hatobj.getDescription();
+    	}
+        return "unknown";
+    }
+
+    @Override
+    public int getPrice() {
+    	if(hatobj!=null) {
+    		return hatobj.getPrice();
+    	}
+        return 0;
+    }
+}

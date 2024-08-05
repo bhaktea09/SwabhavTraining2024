@@ -1,0 +1,37 @@
+package com.techlabs.behavourial.test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import javax.management.Notification;
+
+import com.techlabs.behavourial.model.Account;
+import com.techlabs.behavourial.model.Emailnotifier;
+import com.techlabs.behavourial.model.INotifier;
+import com.techlabs.behavourial.model.SMSnotifier;
+import com.techlabs.behavourial.model.Whatsappnotifier;
+
+public class Accountnotifiertest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<INotifier> notifier = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("sms notification :");
+		System.out.println("email notification :");
+		System.out.println("whatsapp notification :");
+		
+		Account an = new Account(123, "bhakti", 4000, );
+		INotifier notifier1 = new SMSnotifier(); 
+		INotifier notifier2 = new Emailnotifier();
+		INotifier notifier3 = new Whatsappnotifier();
+		
+		System.out.println(an.getNotifier());
+		System.out.print(notifier1.notification());
+		
+		
+		
+	}
+
+}

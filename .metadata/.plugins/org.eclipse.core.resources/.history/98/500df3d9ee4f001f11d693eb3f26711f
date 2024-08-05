@@ -1,0 +1,30 @@
+package com.techlabs.structural.adapter.model;
+
+public class Hat implements Iitems {
+	private String shortname;
+	private String longname;
+	private double price;
+	
+	
+	public Hat(String shortname, String longname , double price) {
+		super();
+		this.shortname = shortname;
+		this.longname = longname;
+		this.price= price;
+	}
+	@Override
+	public String getItemname() {
+		// TODO Auto-generated method stub
+		return longname;
+	}
+	
+	
+	@Override
+	public int getItemprice() {
+		// TODO Auto-generated method stub
+		return price;
+	}
+	
+	
+	
+}
