@@ -1,0 +1,26 @@
+package com.techlabs.test;
+
+// Define a functional interface for calculating factorial
+@FunctionalInterface
+interface Ifactorial {
+    int calculate(int number);
+}
+
+public class FactorialTest {
+
+    public static void main(String[] args) {
+        // Create a lambda expression for factorial calculation
+        Ifactorial factorial = number -> {
+            int result = 1;
+            for (int i = 1; i <= number; i++) {
+                result *= i;
+            }
+            return result;
+        };
+        
+        // Test the lambda expression
+        int number = 5; // Example number
+        int result = factorial.calculate(number);
+        System.out.println("Factorial of " + number + " is " + result);
+    }
+}

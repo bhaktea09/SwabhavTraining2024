@@ -2,18 +2,26 @@ package com.aurionpro.test;
 
 import java.util.Scanner;
 
-public class perfectnumber {
+public class PerfectNumber {
 
 	public static void main(String[] args) {
-		Scanner sc =  new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number:");
 		int number = sc.nextInt();
-		int temp =number;
-		int  i = 1;
-		 while (i>= number)
-			 number % i == 0;
-		 
-		 
-		 
-	}
 
+		int sumOfDivisors = 0;
+
+		for (int i = 1; i <= number / 2; i++) {
+			if (number % i == 0) {
+				sumOfDivisors += i;
+			}
+		}
+
+		if (sumOfDivisors == number) {
+			System.out.println(number + " is a perfect number.");
+		} else {
+			System.out.println(number + " is not a perfect number.");
+		}
+
+	}
 }

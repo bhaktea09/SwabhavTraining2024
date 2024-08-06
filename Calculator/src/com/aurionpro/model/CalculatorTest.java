@@ -2,56 +2,59 @@ package com.aurionpro.model;
 
 import java.util.Scanner;
 
-import com.aurionpro.model.*;
+public class CalculatorTest {
 
-public class CalculatorTest { 
-	public static void main(String[]args) {
-      Scanner sc = new Scanner(System.in);
-      System.out.println(" enter number1 :");
-		int a = sc.nextInt();
-		System.out.println(" enter number2 :");
-		int b = sc.nextInt();
-		 System.out.println(" enter number3 :");
-			int c = sc.nextInt();
-			System.out.println(" enter number4 :");
-			int d = sc.nextInt();
-			int result1 ;
-		
-		
-		int sum = add(c, d);
-		System.out.println("Addition is" +sum);
-	
-		int sub = sub(a, b);
-		System.out.println("subtraction is"+sub);
-	
-		int mul = mul(c, d);
-		System.out.println("Miltiplication is"+mul);
-	
-		int div = div(a, b);
-		System.out.println("Division is"+div);
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter number1:");
+        int a = sc.nextInt();
+        
+        System.out.println("Enter number2:");
+        int b = sc.nextInt();
+        
+        System.out.println("Enter number3:");
+        int c = sc.nextInt();
+        
+        System.out.println("Enter number4:");
+        int d = sc.nextInt();
+        
+        int sum = add(c, d);
+        System.out.println("Addition is: " + sum);
+        
+        int sub = sub(a, b);
+        System.out.println("Subtraction is: " + sub);
+        
+        int mul = mul(c, d);
+        System.out.println("Multiplication is: " + mul);
+        
+        int div = div(a, b);
+        System.out.println("Division is: " + div);
+        
+        sc.close(); // Close the scanner to prevent resource leaks
+    }
 
-	private static int div(int a, int b) {
-	    result1 = div(a, b);
-        result1 = mul(result1*b ) ;
-		return result1 * b ;
-	}
-	private static int mul(int i) {
-		return 0;
-	}
-	}
-	private static int sub(int a, int b) {
-		 result1 = add(c, d);
-		 rsult1 = sub(result1- b);
-	   	return result1-b ;
+    // Method to add two numbers
+    private static int add(int c, int d) {
+        return c + d;
+    }
 
-	int add(int c, int d) {
-		return c+d;
-	}
+    // Method to subtract two numbers
+    private static int sub(int a, int b) {
+        return a - b;
+    }
+
+    // Method to multiply two numbers
+    private static int mul(int c, int d) {
+        return c * d;
+    }
+
+    // Method to divide two numbers
+    private static int div(int a, int b) {
+        if (b == 0) {
+            System.out.println("Error: Division by zero.");
+            return 0;
+        }
+        return a / b;
+    }
 }
-	}
-	
-	
-	
-	long b = (long) (10 + 10.5);
-	 byte a = (byte) (b + 10 + 10.5);

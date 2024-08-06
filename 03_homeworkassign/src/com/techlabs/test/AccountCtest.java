@@ -26,7 +26,7 @@ public class AccountCtest {
             accounts.add(new AccountC(accountNumber, name, balance));
         }
 
-        // Sort accounts by balance using natural ordering (assuming AccountC implements Comparable<AccountC>)
+        // Sort accounts by balance using natural ordering
         Collections.sort(accounts);
 
         System.out.println("Accounts sorted by balance:");

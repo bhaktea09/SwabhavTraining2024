@@ -1,0 +1,40 @@
+package com.techlabs.model;
+
+public class EmployeeDetails {
+
+    private int employeeId;
+    private String name;
+    private double salary;
+
+    // Setter methods
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    // Method to display employee details
+    public void displayDetails() {
+        System.out.println("Employee ID: " + employeeId);
+        System.out.println("Name: " + name);
+        System.out.println("Salary: " + salary);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of EmployeeDetails
+        EmployeeDetails employee = new EmployeeDetails();
+        employee.setEmployeeId(1);
+        employee.setName("BHAKTI");
+        employee.setSalary(50000);
+        
+        // Display details of the employee
+        System.out.println("Details of Employee 1:");
+        employee.displayDetails();
+    }
+}
